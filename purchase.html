@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>BUY TICKETS</title>
+</head>
+
+<body>
+    <header>
+        <ul id="navigation">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="details.html">SCHEDULE</a></li>
+            <li><a href="purchase.html">BUY TICKETS</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section id="purchase-form-section">
+            <h2>BUY TICKETS</h2>
+            <form id="purchase-form">
+                <label for="ticket-type">Choose Type：</label>
+                <select id="ticket-type" name="ticket-type">
+                    <option value="one-pass">ONE PASS</option>
+                    <option value="the-other">The Other</option>
+                </select>
+
+                <label for="ticket-quantity">Number</label>
+                <input type="number" id="ticket-quantity" name="ticket-quantity" min="1" value="1">
+
+                <label for="credit-card">Credit Card</label>
+                <input type="text" id="credit-card" name="credit-card" pattern="[0-9]{6}" placeholder="Input 6 digits">
+
+                <button id="pay-button" type="button">PAY NOW</button>
+            </form>
+        </section>
+
+        <section id="order-summary-section">
+            <h2>Summary</h2>
+            <div id="order-summary">
+                <p>Number: <span id="ticket-count">0</span></p>
+                <p>Price: <span id="ticket-price">$0.00</span></p>
+                <p>Subtotal: <span id="subtotal">$0.00</span></p>
+                <p>HST (13%): <span id="tax">$0.00</span></p>
+                <p>Total: <span id="total">$0.00</span></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Toronto International Film Festival</p>
+        <div class="social-media-icons">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
