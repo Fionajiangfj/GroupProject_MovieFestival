@@ -1,64 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Film Festival</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <!-- Navigation section -->
     <header>
-        <ul id="navigation">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="details.html">SCHEDULE</a></li>
-            <li><a href="purchase.html">BUY TICKETS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
+      <a href="index.html" id="logo">ToInFiFe</a>
+      <ul id="navbar">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="details.html">SCHEDULE</a></li>
+        <li><a href="purchase.html">BUY TICKETS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
     </header>
 
     <main>
-        <section id="header-section">
-            <h1>Toronto International Film Festival</h1>
-            <p>October 21-24, 2023</p>
-            <p>Toronto, Canada</p>
-        </section>
+      <!-- Main Image heading section -->
+      <section id="header-section">
+        <!-- <img
+          src="./assets/images/toronto_skylines.jpg"
+          alt="This is Toronto skyline"
+          style="width: 100%; height: 800px; margin: 0"
+        /> -->
+        <h1>Toronto International Film Festival</h1>
+        <p>Join the festival from October 21 to October 24, 2023</p>
+        <p>Toronto, Canada</p>
+        <a href="#">Buy Ticket</a>
+      </section>
 
-        <section id="tickets-section">
-            <h2>Tickets And Pass</h2>
-            <div class="ticket-option">
-                <h3>One Day Pass</h3>
-                <p>Price: $20.00</p>
-                <p>Details</p>
-                <a href="purchase.html">BUY TICKET</a>
-            </div>
-            <div class="ticket-option">
-                <h3>All Access Pass</h3>
-                <p>Price: $50.00</p>
-                <p>Details</p>
-                <a href="purchase.html">BUY TICKET</a>
-            </div>
-        </section>
+      <!-- Ticket and Pass Section -->
+      <section id="tickets-section">
+        <h2 style="color: #8aaae5">Interested in watching show?</h2>
+        <p style="text-align: center; margin-top: 0px">
+          Buy your tickets fast!
+        </p>
+        <div class="ticket-option">
+          <div class="pass-img">
+            <img
+              src="./assets/images/toronto_skylines.jpg"
+              alt="This is Toronto skyline"
+              style="width: 100%; height: 350px; margin: 0"
+            />
+          </div>
+          <div class="pass-content">
+            <h3
+              style="
+                margin-top: 15px;
+                margin-bottom: 0;
+                text-align: right;
+                padding-right: 50px;
+              "
+            >
+              One Day Pass
+            </h3>
+            <p style="font-size: 25px; text-align: right; padding-right: 20px">
+              Price: $20.00
+            </p>
+            <p style="padding: 25px 10px 20px 10px; word-spacing: 2px">
+              See the best film of the Festival, as decided by the best jury in
+              the world: you. The winner of the 2023 People's Choice Award will
+              be announced at 10:30am on Sunday, September 17. Tickets to these
+              free screenings will be available online at 10am on Sunday,
+              September 17. These screenings will be rush eligible.
+            </p>
+            <a href="purchase.html" class="btn-ticket">BUY TICKET</a>
+          </div>
+        </div>
+        <div
+          class="ticket-option"
+          style="padding-top: 20px; padding-bottom: 50px"
+        >
+          <div class="pass-img">
+            <img
+              src="./assets/images/toronto_skylines.jpg"
+              alt="This is Toronto skyline"
+              style="width: 100%; height: 350px; margin: 0"
+            />
+          </div>
+          <div class="pass-content">
+            <h3
+              style="
+                margin-top: 15px;
+                margin-bottom: 0;
+                text-align: right;
+                padding-right: 50px;
+              "
+            >
+              All Access Pass
+            </h3>
+            <p style="font-size: 25px; text-align: right; padding-right: 20px">
+              Price: $50.00
+            </p>
+            <p style="padding: 25px 10px 20px 10px; word-spacing: 2px">
+              See the best film of the Festival, as decided by the best jury in
+              the world: you. The winner of the 2023 People's Choice Award will
+              be announced at 10:30am on Sunday, September 17. Tickets to these
+              free screenings will be available online at 10am on Sunday,
+              September 17. These screenings will be rush eligible.
+            </p>
+            <a href="purchase.html" class="btn-ticket">BUY TICKET</a>
+          </div>
+        </div>
+      </section>
 
-        <section id="map-section">
-            <h2>MAP</h2>
-            <p>PLEASE FOLLOW REQUIREMENT FROM ASSIGNMENT!</p>
-            <div id="map"></div>
-        </section>
+      <!-- Talks and Special Event Section -->
+      <section id="special-event-section">
+        <h2 style="margin: 0; color: white;">Talks & Special Events</h2>
+        <div id="card-container">
+            <div class="card">
+                <img src="./assets/images/toronto.jpg" alt="Card1" />
+                <h1>This is a Card 1</h1>
+                <a href="#" class="btn-card">Watch Now</a>
+            </div>
+            <div class="card">
+                <img src="./assets/images/toronto.jpg" alt="Card2" />
+                <h1>This is a Card 2</h1>
+                <a href="#" class="btn-card">Watch Now</a>
+            </div>
+            <div class="card">
+                <img src="./assets/images/toronto.jpg" alt="Card3" />
+                <h1>This is a Card 3</h1>
+                <a href="#" class="btn-card">Watch Now</a>
+            </div>
+            <div class="card">
+                <img src="./assets/images/toronto.jpg" alt="Card4" />
+                <h1>This is a Card 4</h1>
+                <a href="#" class="btn-card">Watch Now</a>
+            </div>
+        </div>
+      </section>
+
+      <!-- Map Section -->
+      <section id="map-section">
+        <h2 style="margin: 0; color: #8aaae5;">Find your way to Venue</h2>
+        <!-- <p style="margin: 0">PLEASE FOLLOW REQUIREMENT FROM ASSIGNMENT!</p> -->
+        <div id="map"></div>
+      </section>
     </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Toronto International Film Festival</p>
-        <div class="social-media-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
+      <p style="padding-bottom: 30px">
+        &copy; 2023 Toronto International Film Festival
+      </p>
+      <div class="social-media-icons">
+        <a href="#"
+          ><img src="./assets/images/facebook_icon.png" alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/twitter_icon.png" alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/instagram_icon.png" alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/tiktok_icon.png" alt="Tiktok"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/pinterest_icon.png" alt="pinterest"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/youtube_icon.png" alt="Youtube"
+        /></a>
+      </div>
     </footer>
-
+    <!-- 
     <script src="leaflet.js"></script>
-    <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script> -->
+  </body>
 </html>
