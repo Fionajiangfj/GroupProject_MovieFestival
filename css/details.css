@@ -1,0 +1,91 @@
+main {
+    background-color: #831010;
+    color: white;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.row {
+    background-color: black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    gap: 200px;
+    margin-bottom: 20px;
+    height: 450px;
+}
+
+/* left-col */
+.row > img {
+    width: 300px;
+    height: 450px;
+}
+
+
+/* right-col */
+.right-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-col > h2 {
+    
+    font-weight: bold;
+
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+
+/* genre */
+.right-col > p[class="genre"] {
+    margin-bottom: 50px;
+    display: flex;
+    gap: 12px;
+}
+
+.right-col > p[class="genre"] > span {
+    border: 1px solid #564d4d;
+    border-radius: 30px;
+    padding: 10px;
+
+    color: #831010;
+
+    font-weight: bold;
+}
+
+/* cast */
+.right-col > div[class="cast-date"] {
+    display: flex;
+    gap: 20px;
+    height: 40px;
+}
+
+.cast-date > .title {
+    font-weight: 550;
+}
+
+.cast-date > .content {
+    font-weight: 500;
+    color: #db0000;
+}
+
+/* buy-ticket-link */
+.buy-ticket-link {
+    background-color: #db0000;
+    color: white;
+
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    
+    border-radius: 8px;
+
+    padding: 10px;
+    margin-top: 40px;
+    width: 180px;
+}
