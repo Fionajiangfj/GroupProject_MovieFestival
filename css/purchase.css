@@ -49,14 +49,24 @@ main {
   background-color: black;
 }
 
-
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 50px;
   color: white;
 }
 
+#container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 10%;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
 form {
+  width: 40vw;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -64,13 +74,13 @@ form {
 }
 
 label {
-  display: block;
+  color: white;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
 select {
-  width: 97%;
+  width: 92.5%;
   padding: 15px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
@@ -89,10 +99,9 @@ input[type="text"] {
 }
 
 button {
-  display: block;
   width: 50%;
   padding: 15px;
-  margin: 20px auto 0px auto;
+  margin-top: 2%;
   background-color: #db0000;
   color: #fff;
   border: none;
@@ -105,40 +114,35 @@ button:hover {
   background-color: #831010;
 }
 
-#error {
-  text-align: center;
-  margin-top: 10px;
-}
-
 #order-summary {
-  color: white;
-  margin-top: 20px;
+  width: 15vw;
+  height: 24vh;
+  padding: 20px;
   border-radius: 5px;
-  padding: 15px;
+  border: 1px solid #564d4d;
 }
 
 #order-summary h2 {
-  text-align: center;
-  font-size: 24px;
+  font-size: 30px;
   margin-bottom: 15px;
+  text-align: center;
 }
 
 #order-summary p {
-  font-size: 16px;
+  font-size: 20px;
   margin: 5px 0;
   text-align: center;
 }
 
 /* style footer section */
 footer {
-  background-color: #831010;
+  background-color: darkred;
   color: #fff;
   padding: 60px 0;
   text-align: center;
   font-size: 25px;
 }
 
-/* Styling of footer social media icons using class selector */
 .social-media-icons {
   text-align: center;
 }
