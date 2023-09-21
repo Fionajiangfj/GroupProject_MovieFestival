@@ -146,6 +146,25 @@ button:hover {
   text-align: center;
 }
 
+#purchase-history {
+  margin-left: 3%;
+  width: 30vw;
+  overflow: auto;
+  max-height: 300px;
+  border: 1px solid #564d4d;
+}
+
+#purchase-history h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+#purchase-history p {
+  font-size: 20px;
+  margin: 5px 0;
+}
+
 /* style footer section */
 footer {
   background-color: #831010;
