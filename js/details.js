@@ -83,8 +83,8 @@ const movieList = [
     },
 ];
 
-const pageLoaded = () => {
-    for (movie of movieList) {
+const pageLoaded = (movieList) => {
+    for (let movie of movieList) {
 
         // Adjust the font size of movie title according to the length of the title
         let fontSize = "35px";
@@ -130,4 +130,34 @@ const pageLoaded = () => {
     }
 };
 
-document.addEventListener("DOMContentLoaded", pageLoaded);
+
+const searchBtnPressed = () => {
+
+    // get user input
+    const inputElm = document.querySelector('#search-input');
+    const inputVal = inputElm.value;
+
+    let searchList = [];
+    for (let each of movieList) {
+
+        // Join the stars together with ' · ' separator
+        const stars = each.stars.join(" · ");
+
+        if (each.title.toLowerCase().includes(inputVal.toLowerCase()) ||
+            each.director.toLowerCase().includes(inputVal.toLowerCase()) ||
+            stars.toLowerCase().includes(inputVal.toLowerCase())
+        ) {
+            searchList.push(each);
+        }
+    }
+
+    document.querySelector('#main').innerHTML = '';
+    
+    pageLoaded(searchList);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    pageLoaded(movieList);
+    document.querySelector('#btn-search').addEventListener('click', searchBtnPressed);
+});
+
