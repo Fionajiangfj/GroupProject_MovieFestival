@@ -142,7 +142,7 @@ h2 {
   border: 1px solid #cccccc;
   border-radius: 10px;
   width: 30%;
-  padding: 15px 30px 70px 30px;
+  padding: 10px 30px 70px 30px;
   background-color: rgb(226, 225, 225);
   /* box-shadow: 12px 12px 2px 1px #E6E6E6; */
 }
@@ -162,10 +162,10 @@ span {
 }
 
 .pass-detail {
-  padding: 10px 20px 20px 20px;
+  padding: 10px 20px 10px 20px;
   font-size: 20px;
   text-align: left;
-  height: 53%;
+  height: 50%;
 }
 
 /* style button  */
@@ -250,7 +250,7 @@ span {
 footer {
   background-color: #831010;
   color: #fff;
-  padding: 100px 0;
+  padding: 80px 0;
   text-align: center;
   font-size: 25px;
 }
