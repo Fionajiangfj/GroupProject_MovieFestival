@@ -13,6 +13,8 @@ const getPricePerTicket = (ticketType) => {
     }
 };
 
+const orderSummary = document.getElementById('order-summary')
+
 const calculateOrder = () => {
     const ticketType = document.getElementById('ticket-type').value;
     const quantity = parseInt(document.getElementById('quantity').value);
@@ -23,34 +25,36 @@ const calculateOrder = () => {
     const finalPrice = subtotal + tax;
 
     if (quantity < 1) {
-        displayError("You must select a minimum of 1 ticket!");
+        displayError("<p>You must select a minimum of 1 ticket!</p>");
         return;
     } else if (creditCard.length !== 6 || isNaN(creditCard)) {
-        displayError("Please enter a 6-digit credit card number!");
+        displayError("<p>Please enter a 6-digit credit card number!</p>");
         return;
     } else {
-        clearError();
+        const orderSummaryHTML = `
+        <h2>Order Summary</h2>
+        <p>Number of tickets: ${quantity}</p>
+        <p>Price per ticket: $${pricePerTicket.toFixed(2)}</p>
+        <p>Subtotal: $${subtotal.toFixed(2)}</p>
+        <p>Tax (13%): $${tax.toFixed(2)}</p>
+        <p>Final Price: $${finalPrice.toFixed(2)}</p>
+        `;
+        displayOrder(orderSummaryHTML);
     }
 
-    const orderSummaryHTML = `
-    <h2>Order Summary</h2>
-    <p>Number of tickets: ${quantity}</p>
-    <p>Price per ticket: $${pricePerTicket.toFixed(2)}</p>
-    <p>Subtotal: $${subtotal.toFixed(2)}</p>
-    <p>Tax (13%): $${tax.toFixed(2)}</p>
-    <p>Final Price: $${finalPrice.toFixed(2)}</p>
-    `;
-    document.getElementById('order-summary').innerHTML = orderSummaryHTML;
 };
 
 const displayError = (errorMessage) => {
-    document.getElementById('error').innerHTML = errorMessage;
-    document.getElementById('order-summary').innerHTML = "";
+    orderSummary.innerHTML = `<h2>Payment Declined</h2> ${errorMessage}`;
+    orderSummary.style.color = "red";
+    orderSummary.style.display = "block";
 };
 
-const clearError = () => {
-    document.getElementById('error').innerHTML = "";
-};
+const displayOrder = (orderSummaryHTML) => {
+    orderSummary.innerHTML = orderSummaryHTML;
+    orderSummary.style.color = "white";
+    orderSummary.style.display = "block";
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('pay-button').addEventListener('click', calculateOrder);
