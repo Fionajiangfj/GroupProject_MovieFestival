@@ -1,55 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/purchase.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Buy Tickets</title>
-</head>
 
-<body>
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/purchase.css" />
+  </head>
+
+  <body>
+    <!-- Navigation section -->
     <header>
-        <ul id="navigation">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="details.html">SCHEDULE</a></li>
-            <li><a href="purchase.html">BUY TICKETS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-        </ul>
+      <!-- Logo -->
+      <a href="index.html" id="logo">ToInFiFe</a>
+
+      <!-- Navigation links -->
+      <ul id="navbar">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="details.html">SCHEDULE</a></li>
+        <li><a href="purchase.html">BUY TICKETS</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+      </ul>
     </header>
 
-    <h1>Buy Tickets</h1>
-    <form id="purchaseForm">
+    <main>
+      <h1>Buy Tickets</h1>
+      <form id="purchaseForm">
         <label for="ticketType">Select Ticket Type:</label>
         <select id="ticketType" name="ticketType">
-            <option value="regular-daily">Regular Pass - Daily (CineBasic)</option>
-            <option value="regular-4day">Regular Pass - 4-Day Pass (CineBasic)</option>
-            <option value="premium-daily">Premium Pass - Daily (CineElite)</option>
-            <option value="premium-4day">Premium Pass - 4-Day Pass (CineElite)</option>
+          <option value="regular-daily">
+            Regular Pass - Daily (CineBasic)
+          </option>
+          <option value="regular-4day">
+            Regular Pass - 4-Day Pass (CineBasic)
+          </option>
+          <option value="premium-daily">
+            Premium Pass - Daily (CineElite)
+          </option>
+          <option value="premium-4day">
+            Premium Pass - 4-Day Pass (CineElite)
+          </option>
         </select>
 
         <label for="quantity">Enter Quantity of Tickets:</label>
-        <input type="number" id="quantity" value="1">
+        <input type="number" id="quantity" value="1" />
 
         <label for="creditCard">Enter Credit Card (6 digits):</label>
-        <input type="text" id="creditCard" placeholder="Enter 6-digit card number">
+        <input
+          type="text"
+          id="creditCard"
+          placeholder="Enter 6-digit card number"
+        />
 
         <button type="button" id="payNowButton">Pay Now</button>
-    </form>
+      </form>
 
-    <div id="error" style="color: red;"></div>
-    <div id="orderSummary"></div>
+      <div id="error" style="color: red"></div>
+      <div id="orderSummary"></div>
+    </main>
 
+    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2023 Toronto International Film Festival</p>
-        <div class="social-media-icons">
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-        </div>
+      <p style="padding-bottom: 30px">
+        &copy; 2023 Toronto International Film Festival
+      </p>
+      <div class="social-media-icons">
+        <a href="#"
+          ><img
+            src="./assets/images/footer-icons/facebook_icon.png"
+            alt="Facebook"
+        /></a>
+        <a href="#"
+          ><img
+            src="./assets/images/footer-icons/twitter_icon.png"
+            alt="Twitter"
+        /></a>
+        <a href="#"
+          ><img
+            src="./assets/images/footer-icons/instagram_icon.png"
+            alt="Instagram"
+        /></a>
+        <a href="#"
+          ><img src="./assets/images/footer-icons/tiktok_icon.png" alt="Tiktok"
+        /></a>
+        <a href="#"
+          ><img
+            src="./assets/images/footer-icons/pinterest_icon.png"
+            alt="pinterest"
+        /></a>
+        <a href="#"
+          ><img
+            src="./assets/images/footer-icons/youtube_icon.png"
+            alt="Youtube"
+        /></a>
+      </div>
     </footer>
 
     <script src="./js/purchase.js"></script>
-</body>
-
+  </body>
 </html>

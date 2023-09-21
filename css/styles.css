@@ -2,12 +2,9 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* baby blue #8AAAE5 & off-white #FCF6F5*/
-  /* background-color: #8AAAE5;  */
 }
 
 header {
-  /* background-color: #fcf6f5; */
   /* background-color: black; */
   display: flex;
   justify-content: space-between;
