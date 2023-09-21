@@ -1,5 +1,4 @@
 // A list of movies
-
 const movieList = [
     {
         image: "1.jpg",
@@ -83,81 +82,113 @@ const movieList = [
     },
 ];
 
-const pageLoaded = (movieList) => {
-    for (let movie of movieList) {
-
-        // Adjust the font size of movie title according to the length of the title
-        let fontSize = "35px";
-        if (movie.title.length > 30) {
-            fontSize = "24px";
-        }
-
-        // Join the genres together
-        const genres = movie.genre.map(g => `<span>${g}</span>`).join('');
-
-        // Join the stars together with ' · ' separator
-        const stars = movie.stars.join(" · ");
-
-        const output = `
-            <div class="row">
-                <img src="./assets/images/movielist/${movie.image}" alt="${movie.title}" />
-                <div class="right-col">
-                    <h2 style="font-size: ${fontSize};">${movie.title}</h2>
-                    <p class="genre">${genres}</p>
-                    
-                    <div class="cast-date">
-                        <p class="title">Director</p>
-                        <p class="content">${movie.director}</p>
-                    </div>
-                    <div class="cast-date">
-                        <p class="title">Stars</p>
-                        <p class="content">
-                        ${stars}</p>
-                    </div>
-                    <div class="cast-date">
-                        <p class="title">Starts at</p>
-                        <p class="content">${movie.time}</p>
-                    </div>
-
-                    <a class="buy-ticket-link" href="purchase.html"
-                        >Buy Ticket</a
-                    >
-                </div>
-            </div>
-        `;
-
-        document.querySelector('#main').innerHTML += output;
-    }
-};
-
-
-const searchBtnPressed = () => {
-
-    // get user input
-    const inputElm = document.querySelector('#search-input');
-    const inputVal = inputElm.value;
-
-    let searchList = [];
-    for (let each of movieList) {
-
-        // Join the stars together with ' · ' separator
-        const stars = each.stars.join(" · ");
-
-        if (each.title.toLowerCase().includes(inputVal.toLowerCase()) ||
-            each.director.toLowerCase().includes(inputVal.toLowerCase()) ||
-            stars.toLowerCase().includes(inputVal.toLowerCase())
-        ) {
-            searchList.push(each);
-        }
-    }
-
-    document.querySelector('#main').innerHTML = '';
-    
-    pageLoaded(searchList);
-}
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    const btnSearch = document.querySelector('#btn-search');
+    const btnClear = document.querySelector('#btn-clear');
+    const inputElm = document.querySelector('#search-input');
+
+    // By default, show search btn, hide clear btn
+    btnSearch.style.display = 'block';
+    btnClear.style.display = 'none';
+    
+    const pageLoaded = (movieList) => {
+        
+        // Clear out last search result
+        document.querySelector('#main-movie').innerHTML = '';
+
+        for (let movie of movieList) {
+    
+            // Adjust the font size of movie title according to the length of the title
+            let fontSize = "35px";
+            if (movie.title.length > 30) {
+                fontSize = "24px";
+            }
+    
+            // Join the genres together
+            const genres = movie.genre.map(g => `<span>${g}</span>`).join('');
+    
+            // Join the stars together with ' · ' separator
+            const stars = movie.stars.join(" · ");
+    
+            const output = `
+                <div class="row">
+                    <img src="./assets/images/movielist/${movie.image}" alt="${movie.title}" />
+                    <div class="right-col">
+                        <h2 id="movie-title" style="font-size: ${fontSize};">${movie.title}</h2>
+                        <p class="genre">${genres}</p>
+                        
+                        <div class="cast-date">
+                            <p class="title">Director</p>
+                            <p class="content">${movie.director}</p>
+                        </div>
+                        <div class="cast-date">
+                            <p class="title">Stars</p>
+                            <p class="content">
+                            ${stars}</p>
+                        </div>
+                        <div class="cast-date">
+                            <p class="title">Starts at</p>
+                            <p class="content">${movie.time}</p>
+                        </div>
+    
+                        <a class="buy-ticket-link" href="purchase.html"
+                            >Buy Ticket</a
+                        >
+                    </div>
+                </div>
+            `;
+    
+            document.querySelector('#main-movie').innerHTML += output;
+        }
+    };
+    
+
+    const searchBtnPressed = () => {
+        
+        // When search btn clicked, hide it, show clear btn
+        btnClear.style.display = 'block';
+        btnSearch.style.display = 'none';
+
+        // Get user input
+        const inputVal = inputElm.value;
+        
+        // Fill search result list
+        let searchList = [];
+        for (let each of movieList) {
+    
+            const stars = each.stars.join(" · ");
+    
+            if (each.title.toLowerCase().includes(inputVal.toLowerCase()) ||
+                each.director.toLowerCase().includes(inputVal.toLowerCase()) ||
+                stars.toLowerCase().includes(inputVal.toLowerCase())
+            ) {
+                searchList.push(each);
+            }
+        }
+        
+        // Load search result list
+        pageLoaded(searchList);
+    }
+    
+
+    const clearBtnPressed = () => {
+        
+        // Clear input field, and show hide clear btn
+        inputElm.value = '';
+        btnSearch.style.display = 'block';
+        btnClear.style.display = 'none';
+
+        // Show the full list
+        pageLoaded(movieList);
+    }
+
+    
+    // By default, show the full movie list
     pageLoaded(movieList);
-    document.querySelector('#btn-search').addEventListener('click', searchBtnPressed);
+    
+    btnSearch.addEventListener('click', searchBtnPressed);
+    btnClear.addEventListener('click', clearBtnPressed);
 });
 

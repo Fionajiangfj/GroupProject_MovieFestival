@@ -1,12 +1,63 @@
 main {
     background-color: #831010;
+    border: 1px solid #831010;
     color: white;
 
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
 }
 
-#main {
+
+/* search section in main */
+main>#search-input {
+    display: block;
+    width: 50%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+
+    border-radius: 8px;
+}
+
+main>#btn-search {
+    width: 15%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    background-color: black;
+    color: #db0000;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+main>#btn-clear {
+    width: 15%;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+
+    background-color: white;
+    color: black;
+
+    font-weight: bold;
+
+    border-radius: 8px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* search result section in main */
+#main-movie {
     width: 80%;
     margin: 0 auto;
 }
@@ -20,8 +71,9 @@ main {
     height: 450px;
 }
 
+
 /* left-col */
-.row > img {
+.row>img {
     width: 300px;
     height: 450px;
 }
@@ -33,22 +85,23 @@ main {
     flex-direction: column;
 }
 
-.right-col > h2 {
-    
+.right-col>#movie-title {
+
     font-weight: bold;
 
     margin-top: 50px;
     margin-bottom: 0px;
 }
 
+
 /* genre */
-.right-col > p[class="genre"] {
+.right-col>p[class="genre"] {
     margin-bottom: 50px;
     display: flex;
     gap: 12px;
 }
 
-.right-col > p[class="genre"] > span {
+.right-col>p[class="genre"]>span {
     border: 1px solid #564d4d;
     border-radius: 30px;
     padding: 10px;
@@ -58,21 +111,23 @@ main {
     font-weight: bold;
 }
 
+
 /* cast */
-.right-col > div[class="cast-date"] {
+.right-col>div[class="cast-date"] {
     display: flex;
     gap: 20px;
     height: 40px;
 }
 
-.cast-date > .title {
+.cast-date>.title {
     font-weight: 550;
 }
 
-.cast-date > .content {
+.cast-date>.content {
     font-weight: 500;
     color: #db0000;
 }
+
 
 /* buy-ticket-link */
 .buy-ticket-link {
@@ -82,7 +137,7 @@ main {
     text-decoration: none;
     text-align: center;
     font-weight: bold;
-    
+
     border-radius: 8px;
 
     padding: 10px;
