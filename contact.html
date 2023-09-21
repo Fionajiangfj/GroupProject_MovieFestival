@@ -4,41 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/contact.css">
     <title>Contact Us</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/contact.css">
+
 </head>
 
 <body>
+    <!-- Navigation section -->
     <header>
+        <!-- Logo -->
         <a href="index.html" id="logo">ToInFiFe</a>
-
+  
+        <!-- Navigation links -->
         <ul id="navbar">
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="details.html">SCHEDULE</a></li>
-            <li><a href="purchase.html">BUY TICKETS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="details.html">SCHEDULE</a></li>
+          <li><a href="purchase.html">BUY TICKETS</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
         </ul>
-    </header>
+      </header>
 
     <main>
         <h1>Contact Us</h1>
 
+        <!-- Form section -->
         <form id="contact-form">
             <label for="name">Name</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" placeholder="Enter your name" required> 
 
             <label for="email">Email</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" placeholder="Enter your email address" required>
 
             <label for="message">Message</label>
-            <textarea id="message" rows="5" required></textarea>
+            <textarea id="message" rows="5" placeholder="Type any message" required></textarea>
 
             <button type="submit">Send</button>
         </form>
-
     </main>
 
 
+    <!-- Footer Section -->
     <footer>
         <p style="padding-bottom: 30px">
             &copy; 2023 Toronto International Film Festival
@@ -53,7 +60,9 @@
         </div>
     </footer>
 
+    <!-- Link to Javascript file -->
     <script src="./js/contact.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
