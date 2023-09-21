@@ -42,24 +42,48 @@
     <main>
       <!-- Main Image heading section -->
       <section id="main-header-section">
+        <!-- Slideshow of movie images which changes in every 3 seconds-->
+        <div class="slideshow-container">
+          <div class="slide">
+            <img
+              src="./assets/images/main-header-imgs/Barbie.jpg"
+              style="width: 100%"
+            />
+          </div>
 
-        <!-- background images video for main-header  -->
-        <video
-          id="background-video"
-          autoplay
-          loop
-          muted
-          poster="/assets/videos/movies-header.mov"
-        >
-          <source
-            src="/assets/videos/movies-header.mov"
-            type="video/mp4"
-          />
-        </video>
+          <div class="slide">
+            <img
+              src="./assets/images/main-header-imgs/AHauntinginVenice.jpeg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./assets/images/main-header-imgs/Oppenheimer.jpeg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./assets/images/main-header-imgs/TheCreator.jpeg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="slide">
+            <img
+              src="./assets/images/main-header-imgs/MyBigFatGreekWedding3.jpeg"
+              style="width: 100%"
+            />
+          </div>
+        </div>
+
         <h1>Toronto International Film Festival</h1>
         <p>Join the festival from October 21 to October 24, 2023</p>
         <p>Toronto, Canada</p>
-        <a href="#">Buy Ticket</a>
+        <a href="purchase.html">Buy Ticket</a>
       </section>
 
       <!-- Ticket and Pass Section -->
@@ -71,6 +95,8 @@
         <p style="text-align: center; margin-top: 0px">
           Buy your tickets fast!
         </p>
+
+        <!-- There are two ticket pass options for customers -->
         <div class="ticket-option">
           <!-- Regular Pass -->
           <div class="access-pass">
@@ -83,7 +109,7 @@
               <li>One free popcorn coupon</li>
               <li>Mobile App Support for scheduling</li>
             </ul>
-            <a href="purchase.html" class="btn-ticket">BUY TICKET</a>
+            <a href="purchase.html" class="btn-ticket">Buy Ticket</a>
           </div>
 
           <!-- Premium Pass -->
@@ -106,95 +132,28 @@
               </li>
             </ul>
 
-            <a href="purchase.html" class="btn-ticket">BUY TICKET</a>
+            <a href="purchase.html" class="btn-ticket">Buy Ticket</a>
           </div>
         </div>
       </section>
 
-      <!-- Talks and Special Event Section -->
-      <section id="special-event-section">
-        <h2 style="margin: 0; color: white">Talks & Special Events</h2>
+
+      <!-- Talks - Best of #TIFF23 Section -->
+      <section id="talk-section">
+        <h2 style="margin: 0; color: white">Talks - Best of #TIFF23</h2>
+        <!-- This is a card container that consist many cards whose datas are sent through Js -->
         <div id="card-container">
-          <div class="card">
-            <img
-              src="./assets/images/talklist/linklater.jpeg"
-              alt="Richard Linklater"
-            />
-            <h1>Richard Linklater</h1>
-            <a href="#" class="btn-card">Watch Now</a>
-          </div>
-          <div class="card">
-            <img
-              src="./assets/images/talklist/toro.jpeg"
-              alt="Guillermo del Toro"
-            />
-            <h1>Guillermo del Toro</h1>
-            <a href="#" class="btn-card">Watch Now</a>
-          </div>
-          <div class="card">
-            <img src="./assets/images/talklist/belo.jpeg" alt="Mahalia Belo" />
-            <h1>Mahalia Belo</h1>
-            <a href="#" class="btn-card">Watch Now</a>
-          </div>
-          <div class="card">
-            <img
-              src="./assets/images/talklist/korine.jpeg"
-              alt="Harmony Korine"
-            />
-            <h1>Harmony Korine</h1>
-            <a href="#" class="btn-card">Watch Now</a>
-          </div>
         </div>
       </section>
+
 
       <!-- Map Section -->
       <section id="map-section">
         <h2 style="margin: 0; color: #831010">Find your way to Venue</h2>
-        <!-- <p style="margin: 0">PLEASE FOLLOW REQUIREMENT FROM ASSIGNMENT!</p> -->
         <div id="map"></div>
       </section>
     </main>
 
-    <!-- Slideshow checking-->
-    <div class="slideshow-container">
-      <div class="slide fade">
-        <img
-          src="./assets/images/main-header-imgs/Barbie.jpg"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="slide fade">
-        <img
-          src="./assets/images/main-header-imgs/AHauntinginVenice.jpeg"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="slide fade">
-        <img
-          src="./assets/images/main-header-imgs/Oppenheimer.jpeg"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="slide fade">
-        <img
-          src="./assets/images/main-header-imgs/TheCreator.jpeg"
-          style="width: 100%"
-        />
-      </div>
-
-      <div class="slide fade">
-        <img
-          src="./assets/images/main-header-imgs/MyBigFatGreekWedding3.jpeg"
-          style="width: 100%"
-        />
-      </div>
-
-      <!-- <a class="prev" onclick="prevSlide()">&#10094;</a>
-      <a class="next" onclick="nextSlide()">&#10095;</a> -->
-    </div>
 
     <!-- Footer Section -->
     <footer>
@@ -233,11 +192,9 @@
       </div>
     </footer>
 
+
     <!-- Javasript -->
     <script src="/js/index.js"></script>
 
-    <!-- 
-    <script src="leaflet.js"></script>
-    <script src="script.js"></script> -->
   </body>
 </html>
