@@ -112,7 +112,7 @@ h2 {
   gap: 100px;
   text-align: center;
   margin-bottom: 0;
-  padding: 40px 40px 50px 40px;
+  padding: 40px 40px 70px 40px;
 }
 
 .access-pass {
@@ -121,23 +121,29 @@ h2 {
   width: 30%;
   padding: 15px 30px 40px 30px;
   background-color: rgb(226, 225, 225);
+  
   /* box-shadow: 12px 12px 2px 1px #E6E6E6; */
 }
 
 h3 {
-  font-size: 35px;
+  font-size: 30px;
   margin: 20px;
 }
 
 .ticket-price {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0;
+}
+
+span {
   color: darkred;
 }
 
 .pass-detail{
-  padding: 0 20px 20px 20px;
+  padding: 10px 20px 20px 20px;
   font-size: 20px;
+  text-align: left;
+  height: 47%;
 }
 
 /* style button  */
@@ -159,18 +165,18 @@ h3 {
   background-color: #8aaae5;
   margin: 0;
   padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 #card-container {
   display: flex;
   justify-content: space-evenly;
   gap: 20px;
-  padding: 20px;
+  padding: 40px 25px 50px 25px;
 }
 
 /* style individual card */
 .card {
-  border: 2px solid white;
   background-color: #fcf6f5;
   width: 35%;
   text-align: center;
@@ -199,14 +205,14 @@ h3 {
 /* style google map section */
 #map-section {
   background-color: #fcf6f5;
-  padding-bottom: 30px;
+  padding: 40px 30px 60px 30px;
 }
 
 #map {
   border: 2px solid black;
   width: 70%;
   height: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
   /* background-color: gray; */
 }
 
