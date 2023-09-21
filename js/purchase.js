@@ -14,9 +14,9 @@ const getPricePerTicket = (ticketType) => {
 };
 
 const calculateOrder = () => {
-    const ticketType = document.getElementById('ticketType').value;
+    const ticketType = document.getElementById('ticket-type').value;
     const quantity = parseInt(document.getElementById('quantity').value);
-    const creditCard = document.getElementById('creditCard').value;
+    const creditCard = document.getElementById('credit-card').value;
     const pricePerTicket = getPricePerTicket(ticketType);
     const subtotal = pricePerTicket * quantity;
     const tax = 0.13 * subtotal;
@@ -40,21 +40,20 @@ const calculateOrder = () => {
     <p>Tax (13%): $${tax.toFixed(2)}</p>
     <p>Final Price: $${finalPrice.toFixed(2)}</p>
     `;
-    document.getElementById('orderSummary').innerHTML = orderSummaryHTML;
+    document.getElementById('order-summary').innerHTML = orderSummaryHTML;
 };
 
 const displayError = (errorMessage) => {
     document.getElementById('error').innerHTML = errorMessage;
-    document.getElementById('orderSummary').innerHTML = "";
+    document.getElementById('order-summary').innerHTML = "";
 };
 
 const clearError = () => {
     document.getElementById('error').innerHTML = "";
 };
 
-
 document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById('payNowButton').addEventListener('click', calculateOrder);
+    document.getElementById('pay-button').addEventListener('click', calculateOrder);
 });
 
 
