@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
+        <link rel="stylesheet" href="./css/purchase.css">
         <link rel="stylesheet" href="./css/details.css" />
         <script src="./js/details.js"></script>
         <title>Movie Details</title>
@@ -11,7 +11,11 @@
 
     <body>
         <header>
-            <ul id="navigation">
+            <!-- Logo -->
+            <a href="index.html" id="logo">ToInFiFe</a>
+
+            <!-- Navigation links -->
+            <ul id="navbar">
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="details.html">SCHEDULE</a></li>
                 <li><a href="purchase.html">BUY TICKETS</a></li>
@@ -20,24 +24,53 @@
         </header>
 
         <main>
-            <input id="search-input" type="text" placeholder="Search for titles, directors and stars...">
-            <!-- <select name="genre" id="genre">
-                <option value=""></option>
-            </select> -->
+            <input
+                id="search-input"
+                type="text"
+                placeholder="Search for titles, directors and stars..."
+            />
             <button id="btn-search">Search</button>
-            <div id="main">
-            </div>
+            <button id="btn-clear">Clear</button>
+            <div id="main-movie"></div>
         </main>
 
+        <!-- Footer Section -->
         <footer>
-            <p>&copy; 2023 Toronto International Film Festival</p>
+            <p style="padding-bottom: 30px">
+                &copy; 2023 Toronto International Film Festival
+            </p>
             <div class="social-media-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/facebook_icon.png"
+                        alt="Facebook"
+                /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/twitter_icon.png"
+                        alt="Twitter"
+                /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/instagram_icon.png"
+                        alt="Instagram"
+                /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/tiktok_icon.png"
+                        alt="Tiktok"
+                /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/pinterest_icon.png"
+                        alt="pinterest"
+                /></a>
+                <a href="#"
+                    ><img
+                        src="./assets/images/footer-icons/youtube_icon.png"
+                        alt="Youtube"
+                /></a>
             </div>
         </footer>
-
-        <script src="script.js"></script>
     </body>
 </html>
