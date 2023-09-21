@@ -42,6 +42,16 @@ header {
   color: #db0000;
 }
 
+/* For making navbar sticky */
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+/* It makes the navbar sticky */
+.sticky {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #cccccc;
+}
+
 
 /* style main section */
 
