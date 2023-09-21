@@ -13,7 +13,22 @@ const getPricePerTicket = (ticketType) => {
     }
 };
 
+
+const purchaseHistory = [];
+
+const addToPurchaseHistory = (ticketType, quantity, totalPrice) => {
+    const purchaseInfo = {
+        ticketType,
+        quantity,
+        totalPrice,
+        date: new Date().toLocaleDateString(),
+    };
+    purchaseHistory.push(purchaseInfo);
+    purchaseHistoryDiv.style.display = "block";
+};
+
 const orderSummary = document.getElementById('order-summary')
+const purchaseHistoryDiv = document.getElementById('purchase-history');
 
 const calculateOrder = () => {
     const ticketType = document.getElementById('ticket-type').value;
@@ -40,6 +55,9 @@ const calculateOrder = () => {
         <p>Final Price: $${finalPrice.toFixed(2)}</p>
         `;
         displayOrder(orderSummaryHTML);
+
+        addToPurchaseHistory(ticketType, quantity, finalPrice);
+        updatePurchaseHistory();
     }
 
 };
@@ -56,8 +74,30 @@ const displayOrder = (orderSummaryHTML) => {
     orderSummary.style.display = "block";
 }
 
+const updatePurchaseHistory = () => {
+    const purchaseList = document.getElementById('purchase-list');
+    purchaseList.innerHTML = '';
+
+    let listItemHTML = `<h2>Purchase History</h2>`;
+
+    purchaseHistory.forEach((purchase, index) => {
+        listItemHTML += `
+        <li>
+            <p><strong>Purchase ${index + 1}:</strong></p>
+            <p>Ticket Type: ${purchase.ticketType}</p>
+            <p>Quantity: ${purchase.quantity}</p>
+            <p>Total Price: $${purchase.totalPrice.toFixed(2)}</p>
+            <p>Date: ${purchase.date}</p>
+        </li>
+    `;
+        purchaseList.innerHTML += listItemHTML;
+    });
+
+    purchaseHistoryDiv.scrollTop = purchaseHistoryDiv.scrollHeight;
+};
+
+
 document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('pay-button').addEventListener('click', calculateOrder);
+    updatePurchaseHistory();
 });
-
-
