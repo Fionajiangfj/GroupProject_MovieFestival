@@ -61,7 +61,7 @@ h1 {
   align-items: center;
   margin-left: 10%;
   background-color: black;
-  padding: 20px;
+  padding: 20px 20px 25px 20px;
   color: white;
 }
 
@@ -69,7 +69,7 @@ form {
   width: 40vw;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0 50px 0;
   border-radius: 5px;
 }
 
@@ -80,12 +80,13 @@ label {
 }
 
 select {
-  width: 92.5%;
+  width: 94.5%;
   padding: 15px;
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 20px;
+  color: gray;
 }
 
 input[type="number"],
@@ -96,6 +97,7 @@ input[type="text"] {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 20px;
+  color: gray;
 }
 
 button {
@@ -136,7 +138,7 @@ button:hover {
 
 /* style footer section */
 footer {
-  background-color: darkred;
+  background-color: #831010;
   color: #fff;
   padding: 60px 0;
   text-align: center;
