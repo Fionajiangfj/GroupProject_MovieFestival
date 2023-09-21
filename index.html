@@ -3,14 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/styles.css" />
     <title>Film Festival</title>
+
+    <!-- External stylesheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Get the leaflet CSS file -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+
+    <!-- Get the leaflet JavaScript file -->
+    <script
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
   </head>
 
   <body>
     <!-- Navigation section -->
     <header>
+      <!-- Logo -->
       <a href="index.html" id="logo">ToInFiFe</a>
+
+      <!-- Navigation links -->
       <ul id="navbar">
         <li><a href="index.html">HOME</a></li>
         <li><a href="details.html">SCHEDULE</a></li>
@@ -21,7 +41,7 @@
 
     <main>
       <!-- Main Image heading section -->
-      <section id="header-section">
+      <section id="main-header-section">
         <!-- <img
           src="./assets/images/toronto_skylines.jpg"
           alt="This is Toronto skyline"
@@ -110,34 +130,34 @@
 
       <!-- Talks and Special Event Section -->
       <section id="special-event-section">
-        <h2 style="margin: 0; color: white;">Talks & Special Events</h2>
+        <h2 style="margin: 0; color: white">Talks & Special Events</h2>
         <div id="card-container">
-            <div class="card">
-                <img src="./assets/images/toronto.jpg" alt="Card1" />
-                <h1>This is a Card 1</h1>
-                <a href="#" class="btn-card">Watch Now</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/toronto.jpg" alt="Card2" />
-                <h1>This is a Card 2</h1>
-                <a href="#" class="btn-card">Watch Now</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/toronto.jpg" alt="Card3" />
-                <h1>This is a Card 3</h1>
-                <a href="#" class="btn-card">Watch Now</a>
-            </div>
-            <div class="card">
-                <img src="./assets/images/toronto.jpg" alt="Card4" />
-                <h1>This is a Card 4</h1>
-                <a href="#" class="btn-card">Watch Now</a>
-            </div>
+          <div class="card">
+            <img src="./assets/images/toronto.jpg" alt="Card1" />
+            <h1>This is a Card 1</h1>
+            <a href="#" class="btn-card">Watch Now</a>
+          </div>
+          <div class="card">
+            <img src="./assets/images/toronto.jpg" alt="Card2" />
+            <h1>This is a Card 2</h1>
+            <a href="#" class="btn-card">Watch Now</a>
+          </div>
+          <div class="card">
+            <img src="./assets/images/toronto.jpg" alt="Card3" />
+            <h1>This is a Card 3</h1>
+            <a href="#" class="btn-card">Watch Now</a>
+          </div>
+          <div class="card">
+            <img src="./assets/images/toronto.jpg" alt="Card4" />
+            <h1>This is a Card 4</h1>
+            <a href="#" class="btn-card">Watch Now</a>
+          </div>
         </div>
       </section>
 
       <!-- Map Section -->
       <section id="map-section">
-        <h2 style="margin: 0; color: #8aaae5;">Find your way to Venue</h2>
+        <h2 style="margin: 0; color: #8aaae5">Find your way to Venue</h2>
         <!-- <p style="margin: 0">PLEASE FOLLOW REQUIREMENT FROM ASSIGNMENT!</p> -->
         <div id="map"></div>
       </section>
@@ -169,6 +189,10 @@
         /></a>
       </div>
     </footer>
+
+    <!-- Javasript -->
+
+    <script src="/index.js"></script>
     <!-- 
     <script src="leaflet.js"></script>
     <script src="script.js"></script> -->
